@@ -23,7 +23,7 @@ corepack enable
 
 Installation options:
 
-![](<./Pasted image 20250327185946.png>)
+![installation-options](<./Pasted image 20250327185946.png>)
 
 Set the desired package manager (various examples)
 
