@@ -1,7 +1,9 @@
+# Corepack Installation Helper Doc
+
 Corepack is a general purpose tool for installing and managing a project's package manager, within the node.js ecosystem.
 
 - If you're a project creator, use the [Leader workflow](#leader-workflow) to set up Corepack for your project.
-- If you're a developer coming to a project that has already had Corepack setup, use the [Contributor Setup](#contributor-setup) section.
+- If you're a developer coming to a project that has already had Corepack setup, use the [Follower Workflow](#follower-workflow) section.
 
 ## Preparation
 
@@ -21,7 +23,7 @@ corepack enable
 
 Installation options:
 
-![](./Pasted%20image%2020250327185946.png)
+![](<./Pasted image 20250327185946.png>)
 
 Set the desired package manager (various examples)
 
@@ -40,6 +42,7 @@ To download an update for the current package manager, use
 ```sh
 corepack up
 ```
+
 ## Follower Workflow
 
 Run as Admin in project folder
@@ -79,4 +82,5 @@ The output you're seeing indicates that the `pnpm install` command ran successfu
 ```
 
 That line indicates that a `preinstall` script in your `package.json` ran automatically as part of the install process. This script runs before `pnpm install` completes and ensures certain conditions are met.
+
 - Specifically, the command `npx --yes only-allow pnpm` runs a package called `only-allow` to enforce that the package manager used for the project is **pnpm**. It prevents the use of other package managers like `npm` or `yarn`.
