@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PowerShell Scripts :: FoodTruckNerds Onboarding :: Documentation</title>
+    <link rel="canonical" href="https://docs.foodtrucknerdz.com/onboarding/setup-gui/scripts.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<link rel="stylesheet" href="../../_/css/site-doc-layout.css">
+<meta name="antora-repo-url" content="https://github.com/FoodTruckNerdz/onboarding">
+<script>
+(function () {
+  const MODE = 'antora-theme-mode'
+  const LEGACY = 'antora-theme'
+  function mode() {
+    const m = localStorage.getItem(MODE)
+    if (m === 'system' || m === 'dark' || m === 'light') return m
+    const o = localStorage.getItem(LEGACY)
+    if (o === 'dark' || o === 'light') return o
+    return 'system'
+  }
+  function isDark() {
+    const m = mode()
+    if (m === 'dark') return true
+    if (m === 'light') return false
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+  if (isDark()) document.documentElement.classList.add('dark-theme')
+})()
+</script>
+  </head>
+  <body class="article">
+<header class="header adt-header">
+  <nav class="navbar adt-site-navbar" aria-label="Site">
+    <div class="navbar-brand adt-header-brand">
+      <a class="adt-header-logo-item" href="https://foodtrucknerdz.com" rel="noopener" target="_blank" title="foodtrucknerdz.com" aria-label="foodtrucknerdz.com (opens in new tab)">
+        <img class="adt-header-logo" src="../../_/img/foodtrucknerdz.svg" width="34" height="34" alt="" />
+      </a>
+      <a class="navbar-item adt-header-title" href="https://docs.foodtrucknerdz.com">Documentation</a>
+    </div>
+    <div id="topbar-nav" class="navbar-menu adt-topbar" role="navigation" aria-label="External links">
+      <div class="navbar-end adt-header-actions">
+        <a class="navbar-item adt-header-icon-btn adt-header-vcs" href="https://github.com/FoodTruckNerdz/onboarding" rel="noopener" target="_blank" title="Source repository" aria-label="Source repository (opens in new tab)">
+          <img class="adt-header-vcs-img" src="../../_/img/vcs/code.svg" width="24" height="24" alt="" />
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="adt-doc-mast" role="navigation" aria-label="Component and location in documentation">
+  <button class="nav-toggle" type="button" aria-label="Toggle main navigation"></button>
+  <div class="adt-doc-mast-center">
+  <nav class="breadcrumbs adt-breadcrumbs" aria-label="Breadcrumb: component, version, and page path">
+  <ul>
+    <li class="adt-breadcrumb-home">
+      <a href="../index.html" class="adt-breadcrumb-home-link" title="Component start page" aria-label="Component start page">
+        <svg class="adt-breadcrumb-home-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </a>
+    </li>
+    <li class="adt-breadcrumb-col adt-breadcrumb-masthead">
+      <div class="adt-bc-cluster" role="group" aria-label="Documentation component and version">
+        <div class="adt-bc-menu adt-bc-menu-project">
+          <button type="button" class="adt-bc-kicker" data-adt-toggle="adt-bc-proj" aria-haspopup="listbox" aria-expanded="false" aria-label="Switch documentation component">
+            <span class="adt-bc-kicker-label">FoodTruckNerds Onboarding</span>
+          </button>
+          <ul class="adt-bc-dropdown adt-bc-dropdown--components" id="adt-bc-proj" role="listbox" hidden>
+            <li role="none" class="adt-bc-menu-item">
+              <a href="../../docs/0.1/index.html" class="">Docs</a>
+            </li>
+            <li role="none" class="adt-bc-menu-item">
+              <a href="../../food-truck-api/1.0/index.html" class="">Food Truck API</a>
+            </li>
+            <li role="none" class="adt-bc-menu-item">
+              <a href="../../ftn-site/index.html" class="">Food Truck Nerdz</a>
+            </li>
+            <li role="none" class="adt-bc-menu-item">
+              <a href="../index.html" class="is-current">FoodTruckNerds Onboarding</a>
+            </li>
+            <li role="none" class="adt-bc-menu-item">
+              <a href="../../developer-portal/1.0/index.html" class="">FoodTruckNerdz Developer Portal Documentation</a>
+            </li>
+            <li role="none" class="adt-bc-menu-item">
+              <a href="../../help/1.0/index.html" class="">FoodTruckNerdz Help Documentation</a>
+            </li>
+            <li role="none" class="adt-bc-menu-item">
+              <a href="../../mobile-apps/index.html" class="">Mobile apps</a>
+            </li>
+          </ul>
+        </div>
+        <span class="adt-bc-sep" aria-hidden="true">|</span>
+        <div class="adt-bc-menu adt-bc-menu-version">
+          <button type="button" class="adt-bc-kicker" data-adt-toggle="adt-bc-ver" aria-haspopup="listbox" aria-expanded="false" aria-label="Select documentation version">
+            <span class="adt-bc-kicker-version">default</span>
+          </button>
+          <ul class="adt-bc-dropdown adt-bc-dropdown--version" id="adt-bc-ver" role="listbox" hidden>
+            <li role="none" class="adt-bc-menu-item">
+              <a href="../index.html" class="adt-bc-version-pill is-current" aria-current="page">default</a>
+            </li>
+          </ul>
+                  </div>
+      </div>
+    </li>
+    <li class="adt-breadcrumb-trail"><a class="adt-breadcrumb-trail-link" href="index.html">Developer Setup GUI</a></li>
+    <li class="adt-breadcrumb-trail adt-breadcrumb-trail--current"><a class="adt-breadcrumb-trail-link" href="scripts.html">PowerShell Scripts</a></li>
+    </ul>
+</nav>
+  </div>
+</div>
+</header>
+<div class="body adt-body">
+<div class="nav-container" data-component="onboarding" data-version="">
+  <aside class="nav">
+    <div class="panels adt-panels adt-panels-solo">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu nav-tree-only adt-nav-tree-only" aria-label="In this section">
+    <button class="nav-menu-toggle" aria-label="Toggle expand and collapse of all item groups" style="display: none"></button>
+    <p class="adt-nav-component-title"><a href="../index.html">FoodTruckNerds Onboarding</a></p>
+    <ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Developer Setup GUI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="installing.html">Installing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="developing.html">Developing</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="scripts.html">PowerShell Scripts</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article adt-article">
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="adt-page-header">
+  <h1 class="page adt-page-title">PowerShell Scripts</h1>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This directory contains PowerShell scripts used by the setup-gui app to help set up and run projects in the FoodTruckNerds workspace. These scripts are typically used for projects like <code>ftn-site</code> and other workspace projects that the setup-gui app helps bootstrap.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setup_ps1_initial_setup"><a class="anchor" href="#_setup_ps1_initial_setup"></a><code>setup.ps1</code> — Initial Setup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sets up the development environment for the project.</p>
+</div>
+<div class="paragraph">
+<p>Usage:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">.\setup.ps1 [options]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-SkipNodeCheck</code> — Skip Node.js version check</p>
+</li>
+<li>
+<p><code>-SkipCorepack</code> — Skip Corepack setup</p>
+</li>
+<li>
+<p><code>-SkipDependencies</code> — Skip dependency installation</p>
+</li>
+<li>
+<p><code>-SkipConvex</code> — Skip Convex setup instructions</p>
+</li>
+<li>
+<p><code>-CreateEnvFiles</code> — Create template environment files</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>What it does:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Checks Node.js version (requires 24.x)</p>
+</li>
+<li>
+<p>Enables Corepack</p>
+</li>
+<li>
+<p>Installs pnpm via Corepack</p>
+</li>
+<li>
+<p>Installs project dependencies</p>
+</li>
+<li>
+<p>Provides Convex setup instructions</p>
+</li>
+<li>
+<p>Optionally creates template environment files</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_ps1_development_server"><a class="anchor" href="#_run_ps1_development_server"></a><code>run.ps1</code> — Development Server</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Starts the development server and handles various tasks.</p>
+</div>
+<div class="paragraph">
+<p>Usage:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">.\run.ps1 [options]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-Build</code> — Build the project for production</p>
+</li>
+<li>
+<p><code>-Production</code> — Start the production server</p>
+</li>
+<li>
+<p><code>-Lint</code> — Run ESLint</p>
+</li>
+<li>
+<p><code>-Format</code> — Format code with Prettier</p>
+</li>
+<li>
+<p><code>-Help</code> — Show help message</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">.\run.ps1              # Start development server
+.\run.ps1 -Build       # Build for production
+.\run.ps1 -Production  # Start production server
+.\run.ps1 -Lint        # Run linting
+.\run.ps1 -Format      # Format code</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick Start</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First time setup:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">.\setup.ps1 -CreateEnvFiles</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Configure environment variables:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit <code>.env.local</code> with your API keys</p>
+</li>
+<li>
+<p>See the docs for required services</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Convex dev server (in separate terminal):</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npx convex dev</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the Next.js development server:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">.\run.ps1</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open your browser at <code><a href="http://localhost:3000" class="bare">http://localhost:3000</a></code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Node.js 24.x</p>
+</li>
+<li>
+<p>PowerShell 5.1+</p>
+</li>
+<li>
+<p>Administrator privileges (for Corepack setup)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_required_services"><a class="anchor" href="#_required_services"></a>Required Services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before running the app, you&#8217;ll need accounts for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Square Developer — <a href="https://developer.squareup.com/us/en" class="bare">https://developer.squareup.com/us/en</a></p>
+</li>
+<li>
+<p>Radar SDK — <a href="https://docs.radar.com/sdk" class="bare">https://docs.radar.com/sdk</a></p>
+</li>
+<li>
+<p>Convex — <a href="https://convex.dev" class="bare">https://convex.dev</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>Troubleshooting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Execution policy:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Node.js version:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">node --version</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Corepack issues: try running PowerShell as Administrator.</p>
+</div>
+<div class="paragraph">
+<p>Missing dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">.\setup.ps1 -SkipNodeCheck -SkipCorepack</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Environment variables to configure in <code>.env.local</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Radar SDK keys</p>
+</li>
+<li>
+<p>Convex deployment URL</p>
+</li>
+<li>
+<p>Square API credentials</p>
+</li>
+<li>
+<p>NextAuth secret</p>
+</li>
+<li>
+<p>Encryption key</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_notes"><a class="anchor" href="#_notes"></a>Notes</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>These scripts are helper scripts used by the setup-gui app when setting up workspace projects</p>
+</li>
+<li>
+<p>Scripts are designed to be run from project directories (e.g., <code>ftn-site</code>)</p>
+</li>
+<li>
+<p>Keep the Convex dev server running while developing (for projects that use Convex)</p>
+</li>
+<li>
+<p>The development server uses Turbopack (for Next.js projects)</p>
+</li>
+<li>
+<p>All scripts include error checking and helpful messages</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Built with <a href="https://antora.org" target="_blank" rel="noopener">Antora</a> <span class="antora-version">(3.1.14)</span>.
+    Base UI:
+    <a href="https://github.com/antora-supplemental/antora-dark-theme" target="_blank" rel="noopener">antora-dark-theme</a>
+    (<a href="https://www.mozilla.org/MPL/2.0/" target="_blank" rel="noopener">MPL-2.0</a>).
+    FoodTruckNerdz extends the UI (header, layout rails, navigation, styling) in the
+    <a href="https://github.com/FoodTruckNerdz/docs" target="_blank" rel="noopener">docs</a> repository;
+    see <a href="https://github.com/FoodTruckNerdz/docs/blob/main/docs/modules/ROOT/pages/docs-site-management.adoc#ui-bundle" target="_blank" rel="noopener">UI bundle and footer</a>.
+  </p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+<script src="../../_/js/site-adt-accordion.js"></script>
+  </body>
+</html>
