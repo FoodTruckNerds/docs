@@ -1,0 +1,43 @@
+= Business resources
+:description: Ops and founder bootstrap stack for FoodTruckNerdz — scheduling, design, vaults — with pointers to Dev-Centr Business Bootstrap.
+:navtitle: Business resources
+
+FoodTruckNerdz uses the same **support-system** guidance as other Dev-Centr orgs. Strategy lives on https://docs.devcentr.org/[docs.devcentr.org] under **Business Bootstrap** (capability areas); this page lists what matters here and where FTN-specific wiring lives.
+
+== Stack we care about
+
+[cols="1,2,2",options="header"]
+|===
+| Job | Guidance | FTN notes
+
+| Scheduling / booking
+| https://docs.devcentr.org/business-bootstrap/scheduling/explanation/cal-com-and-cal-diy.html[Cal.com and Cal.diy] — hosted Cal.com by default; Cal.diy only if we self-host deliberately
+| Use when founder/partner booking pages need a brand hostname (`book.` / `cal.`); put DNS in `infra` when adopted
+
+| Design (Figma-class)
+| https://docs.devcentr.org/business-bootstrap/design/explanation/penpot.html[Penpot] — open design platform; stay on Figma if agency partners require it
+| Product UI / brand libraries; not a substitute for in-repo tokens
+
+| Secrets vault
+| https://docs.devcentr.org/business-bootstrap/vault/explanation/bitwarden-and-vaultwarden.html[Bitwarden and Vaultwarden] — Bitwarden cloud default; Vaultwarden for tiny self-host; official Bitwarden when compliance/SSO matter
+| Current practice: Bitwarden items + custom fields → local env / Vercel (see website private-docs). Prefer ESC later for matrix sync
+
+| Email lanes
+| https://docs.devcentr.org/business-bootstrap/email/[Email] area — human vs product messaging
+| Resend on `updates.foodtrucknerdz.com`; Customer.io for journeys; ZeptoMail for human mail — see `infra` + website messaging docs
+|===
+
+Full hub::
+https://docs.devcentr.org/business-bootstrap/[Business Bootstrap] ·
+https://docs.devcentr.org/business-bootstrap/reference/business-resources.html[Stack map]
+
+== Related on this hub
+
+* xref:partners.adoc[Partners & Services] — product integrations (POS, delivery, discovery), not org bootstrap tools
+* Website: private docs & team secrets (Bitwarden / ESC) in the `website` component
+* Infra: org Pulumi stacks — vendor strategy stays on Dev-Centr; this org encodes DNS
+
+== Anti-patterns
+
+* Duplicating the full Cal.com / Penpot / Vaultwarden essays in FTN docs — link out; keep FTN pages for *our* hostnames and credentials.
+* Treating xref:partners.adoc[Partners] as the place for Bitwarden or Penpot — different job.
